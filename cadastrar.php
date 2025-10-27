@@ -1,5 +1,5 @@
 <?php
-include 'conexao.php';
+include 'conexao_sala.php';
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 
@@ -13,8 +13,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         exit;
     }
 
-
-    $sql = 'INSERT INTO animais (nome, email, historia) VALUE (?,?,?)';
+    $sql = 'INSERT INTO grp_7 (nome, email, mensagem) VALUE (?,?,?)';
 
     $stmt = $conexao->prepare($sql);
 

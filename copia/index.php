@@ -3,7 +3,7 @@
 <?php 
 include 'conexao_sala.php';
 
-$sql = "SELECT nome,mensagem,data_postagem FROM grp_7 ORDER BY id DESC";
+$sql = "SELECT nome,mensagem FROM grp_7 ORDER BY id DESC";
 
 $resultado = $conexao->query($sql);
 ?>
@@ -39,7 +39,7 @@ $resultado = $conexao->query($sql);
                 if ($resultado->num_rows > 0){
                     while($linha = $resultado->fetch_assoc()){
                         echo "<div class= 'mensagem'>";
-                        echo "<h2 id='titulo-Mensagem'>".$linha["nome"].$linha["data_postagem"]."<h2>";
+                        echo "<h2 id='titulo-Mensagem'>".$linha["nome"]."<h2>";
                         echo "<p class='subtitulo'>".$linha["mensagem"]."</p>";
                         echo "</div>";
                     }}
@@ -49,11 +49,7 @@ $resultado = $conexao->query($sql);
             </div>
         </div>
         <footer>
-            <div class="rodape">
-            <img src="./assets/SENAI-SP.jpg" alt="logo sesi" class="img-rodape">
-            <img src="./assets/Sesi-SP.jpg" alt="logo senai" class="img-rodape">
-            <img src="./assets/3devtime.png" alt="logo 3 dev time" class="img-rodape">
-            </div>
+            <img src="" alt="">
         </footer>
     </div>
 

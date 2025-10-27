@@ -1,8 +1,9 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "historia_avare";
+$servername = "192.99.36.226";
+$username = "devtimes_historia_avare";
+$password = "Mne0K+bX0ULv";
+$dbname = "devtimes_historia_avare";
+//grp_7 
 
 // Criar conexão
 $conn = new mysqli($servername, $username, $password, $dbname);
