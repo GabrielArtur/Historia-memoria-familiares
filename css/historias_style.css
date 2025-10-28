@@ -51,13 +51,18 @@ h2 {
     width: 100%;
     background-color: var(--cor-fundo);
 }
+header{
+    
+    width:100%;
+}
 .menu{
     background-color: var(--cor-focus);
     width: 100%;
     display: flex;
     justify-content: center;
-    height: 80px;
+    height: 60px;
     align-items: center;
+    padding: 20px;
 }
 .menu nav{
     width: 100%;
@@ -86,7 +91,11 @@ h2 {
     padding: 20px;
 }
 .contadas{
+    display: flex;
+    justify-content: center;
     width: 100%;
+    padding: 10px;
+    transition: 400ms;
 }
 .inicio {
     text-align: center;
@@ -119,30 +128,13 @@ h2 {
     padding: 50px;
 
 }
-table{
-    border-collapse: collapse;
-    margin-top: 50px;
-    margin-right: 5px;
-}
-thead th{
 
-    background-color: rgb(32, 31, 31);
-    color: white;
-}
-th, td{
-    border: 1px solid black;
-    padding: 12px 8px;
-}
+.historia{
+    width: 60%;
 
-
-tbody tr:hover{
-    background-color: rgb(90, 142, 35);
-    cursor: pointer;
-}
-#historia{
     display: flex;
     flex-direction: column;
-    align-items: center;
+
     gap: 20px;
 }
 #titulo-Mensagem{
@@ -154,20 +146,37 @@ tbody tr:hover{
     
 }
 .mensagem{
-    width: 50%;
+    display: flex;
+    flex-direction: column;
     padding: 50px;
+    margin-bottom: 10px;
+    
     border-radius: 20px;
     border: 2px solid var(--cor-focus);
     transition: all 0.3s ease;
     
+    
+    
+}
+.mensagem details {
+    transition: 400ms;
 }
 .mensagem:hover{
     
     box-shadow: 1px 2px 126px -58px var(--cor-focus);
 -webkit-box-shadow: 1px 2px 126px -58px var(--cor-focus);
 -moz-box-shadow: 1px 2px 126px -58px var(--cor-focus);
+transition: 400ms;
+}
+
+@media screen and (max-widht:767px){
+    .mensagem details p{
+        font-size: 1px;
+    }
 }
 .mensagem-header{
+    width: 100%;
+    
     display: flex;
     justify-content: space-between;
 }
@@ -178,13 +187,48 @@ footer{
     width: 100%;
 }
 .rodape{
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 100px;
-    padding: 20px;
+    padding: 40px;
 }
 .img-rodape{
-    width: 180px;
+    width: 120px;
     height: 50px;
+}
+@media screen and (max-widht:767px){
+    .img-rodape{
+    width: 40%;
+    height: 50%;
+}
+}
+.livro{
+    display: flex;
+    flex-direction: column;
+    gap:20px
+
+}
+.livro-titulo{
+    display: flex;
+    justify-content: center;
+    color: var(--cor-menu);
+    font-size: medium;
+}
+.livro-assunto{
+    display: flex;
+    flex-direction: row;
+    gap:40px;
+}
+@media (max-width: 767px){
+    .livro-assunto{
+    display: flex;
+    flex-direction: column-reverse;
+}
+}
+.livro-descricao{
+    margin-top: 5%;
+    display: flex;
+    
 }

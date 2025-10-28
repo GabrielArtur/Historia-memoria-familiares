@@ -24,10 +24,17 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $stmt->bind_param("sss", $nome,$email,$historia);
 
     if($stmt->execute()){
-        header("Location: index.php");
+
+        
+        header("Location: index.php?status=sucesso");
+        
+
+
     } else{
         if($conexao->error == 1062){
             echo "Mensagem já cadastrado";
+                    header("Location: index.php?status=falha");
+
         } else {
             echo "Erro ao enviar:" . $stmt -> error;
         }
@@ -36,7 +43,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $stmt->close();
     $conexao->close();
 }else{
-    header("Location: index.php");
+    header("Location: index.php?sucesso=falha");
     exit();
 }
 

@@ -35,6 +35,7 @@
                 
                 <button type="submit" class="btn-enviar">
                     <span>Compartilhar História</span>
+
                 </button>
             </form>
         </main>
